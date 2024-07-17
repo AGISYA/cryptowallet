@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-UA-Compatibel" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="./Assets/icon.svg" />
+    <title>Cryptowallet</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="header-menu">
+        <img src="./Assets/logo.png" alt="leogo imag" class="logo" />
+        <img src="./Assets/logo-text.png" alt="logo text" class="logo-text" />
+        <ul>
+          <li class="nav-list"><a href="">Exchange</a></li>
+          <li class="nav-list"><a href="">Market</a></li>
+        </ul>
+      </div>
+      <div class="header-action">
+        <button class="btn btn-secondary">Masuk</button>
+        <button class="btn btn-primary" id="btnRegister">Daftar</button>
+      </div>
+    </div>
+    <!-- End Header  -->
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-text">
+        <h1>
+          Jual beli <br />
+          crypto dalam <br />
+          hitungan menit
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ratione
+          veniam ab dolor numquam alias adipisci ut eligendi. Libero totam
+          obcaecati blanditiis accusamus ipsum nemo culpa repellat enim labore
+          temporibus?
+        </p>
+        <button class="btn btn-primary">Lihat Market trend</button>
+      </div>
+      <div class="hero-image">
+        <img src="./Assets/hero.png" alt="Hero image" />
+      </div>
+    </div>
+    <!-- End Hero  -->
+    <!-- Info  -->
+    <div class="info">
+      <div class="info-card">
+        <div class="info-list">
+          <img src="./Assets/icon1.png" alt="icon1" />
+          <div class="text-header">Bitcoin/BTC</div>
+          <h4>$61,935.97</h4>
+          <div class="text-header">+0.67%</div>
+        </div>
+        <div class="info-list">
+          <img src="./Assets/icon2.png" alt="icon2" />
+          <div class="text-header">Etherium/ETH</div>
+          <h4>$61,935.97</h4>
+          <div class="text-desc">+0.67%</div>
+        </div>
+        <div class="info-list">
+          <img src="./Assets/icon3.png" alt="icon3" />
+          <div class="text-header">Binance/BNB</div>
+          <h4>$485.10</h4>
+          <div class="text-header">+0.67%</div>
+        </div>
+        <div class="info-list">
+          <img src="./Assets/icon4.png" alt="icon4" />
+          <div class="text-header">Tether/USDT</div>
+          <h4>$61,935.97</h4>
+          <div class="text-desc">+0.67%</div>
+        </div>
+      </div>
+    </div>
+    <!-- End Info  -->
+    <!-- Modal -->
+    <div class="modal" id="modalRegister">
+      <div class="modal-content">
+        <div class="modal-close">
+          <span class="icon-close">&times;</span>
+        </div>
+        <h4>Daftar ke Cryptowallet</h4>
+        <div class="modal-desc">
+          Sudah punya akun? <a href="#">Masuk disini</a>
+        </div>
+        <form>
+          <div class="form-input">
+            <label>Email</label>
+            <input type="Email" placeholder="Masukan email" />
+          </div>
+          <div class="form-input">
+            <label>Katasandi</label>
+            <input type="password" placeholder="Masukan email" />
+          </div>
+          <div class="form-input">
+            <label>Konfirmasi Katasandi</label>
+            <input type="password" placeholder="Masukan email" />
+          </div>
+          <button class="btn btn-primary btn-block" id="btnRegister">
+            Daftar
+          </button>
+        </form>
+        <div class="modal-footer">
+          Dengan klik mendaftar, Saya menyetujui
+          <a href="">Syarat dan ketentuan</a> serta
+          <a href="">kebijakan privasi </a> Cryptowallet\
+        </div>
+      </div>
+    </div>
+    <!-- End modal -->
+    <script>
+      var btnRegister = document.getElementById("btnRegister");
+      var modalRegister = document.getElementById("modalRegister");
+      var btnCloseModal = document.getElementsByClassName("icon-close")[0];
+      btnRegister.onclick = function () {
+        // console.log("button register clicked !");
+        modalRegister.style.display = "flex";
+      };
+
+      btnCloseModal.onclick = function () {
+        modalRegister.style.display = "none";
+      };
+
+      window.onclick = function () {
+        //console.log("button register clicked !");
+        if (event.target == modalRegister) {
+          modalRegister.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>
